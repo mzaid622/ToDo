@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete</title>
+    <link rel="stylesheet" href="static/delete_style.css" />
+    <link rel="stylesheet" href="/static/edit_style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h3>
+        ⚠️ Are you sure you want to delete<br /><span class="highlight"
+          >"{{ task }}"</span
+        >?
+      </h3>
+
+      <form method="POST">
+        {% csrf_token %}
+        <button type="submit">Yes, Delete</button>
+        <a href="/">Cancel</a>
+      </form>
+    </div>
+  </body>
+</html>
